@@ -20,6 +20,12 @@ public class Main {
         p1.imprimir();
         p2.imprimir();
         p3.imprimir();
+
+        String nome = "henrique";
+        if (nome.equals("henrique")){
+            System.out.println("usa o equals para comparar ao invez de ==");
+        }
+    
     }
 
 }
