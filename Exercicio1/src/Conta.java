@@ -3,6 +3,6 @@ public class Conta {
         System.out.println("Hello, World!");
 
         int numero;
-        real saldo, limite;
+        Double saldo, limite;
     }
 }
