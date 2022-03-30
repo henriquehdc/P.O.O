@@ -17,6 +17,10 @@ public class Banco {
         this.clientes.add(cliente);
     }
 
+    public void findCustomer(Cliente cliente){     
+         this.clientes.toString();
+    }
+
     public String getNome() {
         return nome;
     }

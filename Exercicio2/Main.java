@@ -4,12 +4,12 @@ public class Main {
 
     private static Banco banco = null;
 
-
     public static void main(String[] args) {
 
      Scanner ler = new Scanner(System.in);
      Boolean exit = false;
      banco = new Banco("ESPM Bank");   
+     
 
         while (!exit){
             System.out.print("ESPM---> ");
@@ -75,10 +75,13 @@ public class Main {
         }
 
         private static void findCustomer(Banco banco){
-            Scanner ler = new Scanner(System.in);
-            System.out.print("Qual cliente desaja procurar: ");
-            String acha = ler.nextLine();
+            Cliente teste = new Cliente();
 
+            Scanner ler = new Scanner(System.in);
+
+            System.out.print("Qual cliente desaja procurar, pelo cpf: ");
+             String acha = ler.nextLine();
+             teste.setCpf(acha);
 
         }
         

@@ -26,4 +26,14 @@ public class Cliente {
                 ", CPF: "  + cpf +" }";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        Cliente acha = (Cliente) obj; // Aqui eu defino o tipo do objeto, no caso classe Aluno
+        if (acha.cpf == cpf){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }
