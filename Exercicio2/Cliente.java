@@ -1,32 +1,45 @@
 
-public class Cliente {
+public abstract class Cliente {
 
   private String nome;
-  private String cpf;
+  private String sobrenome;
+  private Conta conta;
 
     public void setNome(String nome) {
-        this.nome = nome;
+        String[] nomes = nome.split(" ");
+        this.nome = nomes[0];
+        this.sobrenome = nomes[nomes.length - 1];
     }
+    
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
     public String getNome() {
         return nome;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public Cliente( ){
+       this.conta = new Conta(this);
     }
-    
-    public String getcpf() {
-        return cpf;
+
+    public Conta getContas() {
+        return conta;
     }
 
     ///// ALTERAR O RETORNO DA STRING;/////////////
     @Override
     public String toString(){
         return "{ Nome: " + nome +
-                ", CPF: "  + cpf +" }";
+                ", Conta "+ conta  +"}";
     }
 
-    @Override
+
+   /* @Override
     public boolean equals(Object obj) {
         Cliente acha = (Cliente) obj; // Aqui eu defino o tipo do objeto, no caso classe Aluno
         if (acha.cpf == cpf){
@@ -34,6 +47,6 @@ public class Cliente {
         }else {
             return false;
         }
-    }
+    }*/
 
 }
